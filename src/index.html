@@ -8,52 +8,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body class="">
+  <body>
     <!--    Start Navbar    -->
+    <section class="bg-primary fixed top-0 z-50 w-full">
+      <nav
+        class="bg-primary container mx-auto p-4 flex items-center justify-between"
+      >
+        <a href="/">
+          <img src="./assets/logo/logo.svg" alt="Doctor Quiz" />
+        </a>
 
-    <nav
-      class="bg-primary container mx-auto p-4 flex items-center justify-between fixed top-0 z-50"
-    >
-      <a href="/">
-        <img src="./assets/logo/logo.svg" alt="Doctor Quiz" />
-      </a>
+        <!-- start Hamburger Menu -->
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+          </label>
 
-      <!-- start Hamburger Menu -->
-      <div class="hamburger-menu">
-        <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
-          <span></span>
-        </label>
-
-        <ul class="menu__box">
-          <li><a class="menu__item" href="#">Accueil</a></li>
-          <li><a class="menu__item" href="#">Caractéristique</a></li>
-          <li><a class="menu__item" href="#">Fonctionnalités</a></li>
-          <li><a class="menu__item" href="#">Tarif</a></li>
-        </ul>
-      </div>
-      <!-- end Hamburger Menu -->
-    </nav>
-
+          <ul class="menu__box">
+            <li><a class="menu__item" href="#">Accueil</a></li>
+            <li><a class="menu__item" href="#">Caractéristique</a></li>
+            <li><a class="menu__item" href="#">Fonctionnalités</a></li>
+            <li><a class="menu__item" href="#">Tarif</a></li>
+          </ul>
+        </div>
+        <!-- end Hamburger Menu -->
+      </nav>
+    </section>
     <!--    End Navbar    -->
 
     <!--    Start Header    -->
-    <section class="header container mx-auto bg-primary mt-14 pb-10">
-      <div class="text-center space-y-14 p-4">
-        <img src="./assets/images/imgHeader.png" alt="" class="mx-auto" />
-        <div class="space-y-4">
-          <h1 class="text-textColor text-3xl font-bold mx-auto max-w-xs">
-            Ton premier pas vers la réussite en sciences médicales.
-          </h1>
-          <p class="text-textColor text-sm font-normal max-w-sm mx-auto">
-            Rejoins plus de 50K étudiants en médecine, pharmacie et médecine
-            dentaire qui utilisent Siamois QCM pour préparer leurs examens et
-            concours du résidana
-          </p>
+    <section class="header bg-primary">
+      <div class="container mx-auto mt-14 pb-10">
+        <div class="text-center space-y-14 p-4">
+          <img src="./assets/images/imgHeader.png" alt="" class="mx-auto" />
+          <div class="space-y-4">
+            <h1 class="text-textColor text-3xl font-bold mx-auto max-w-xs">
+              Ton premier pas vers la réussite en sciences médicales.
+            </h1>
+            <p class="text-textColor text-sm font-normal max-w-sm mx-auto">
+              Rejoins plus de 50K étudiants en médecine, pharmacie et médecine
+              dentaire qui utilisent Siamois QCM pour préparer leurs examens et
+              concours du résidana
+            </p>
+          </div>
+          <button class="bg-white px-14 py-4 text-lg font-medium">
+            Choisir le programme
+          </button>
         </div>
-        <button class="bg-white px-14 py-4 text-lg font-medium">
-          Choisir le programme
-        </button>
       </div>
     </section>
     <!--    End Header    -->
@@ -333,10 +335,20 @@
       <div class="contact space-y-5">
         <h1 class="text-white font-semibold text-2xl">Contact</h1>
         <div class="space-y-3">
-          <input type="mail" placeholder="Email" class="p-2 border border-white outline-none bg-primary placeholder-white"/>
-          <input type="text" placeholder="Message" class="p-2 border border-white outline-none bg-primary placeholder-white"/>
+          <input
+            type="mail"
+            placeholder="Email"
+            class="p-2 border border-white outline-none bg-primary placeholder-white"
+          />
+          <input
+            type="text"
+            placeholder="Message"
+            class="p-2 border border-white outline-none bg-primary placeholder-white"
+          />
         </div>
-        <button class="px-6 py-2 bg-white font-medium text-base">Envoyer</button>
+        <button class="px-6 py-2 bg-white font-medium text-base">
+          Envoyer
+        </button>
       </div>
     </footer>
 
