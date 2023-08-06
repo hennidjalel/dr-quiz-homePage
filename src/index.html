@@ -43,10 +43,10 @@
         <div class="text-center space-y-14 p-4">
           <img src="./assets/images/imgHeader.png" alt="" class="mx-auto" />
           <div class="space-y-4">
-            <h1 class="text-textColor text-3xl font-bold mx-auto max-w-xs">
+            <h1 class="text-textColor text-3xl font-bold mx-auto max-w-xs  md:max-w-md md:text-4xl ">
               Ton premier pas vers la réussite en sciences médicales.
             </h1>
-            <p class="text-textColor text-sm font-normal max-w-sm mx-auto">
+            <p class="text-textColor text-sm font-normal max-w-sm mx-auto md:text-base">
               Rejoins plus de 50K étudiants en médecine, pharmacie et médecine
               dentaire qui utilisent Siamois QCM pour préparer leurs examens et
               concours du résidana
@@ -63,14 +63,14 @@
     <!--    Start caractéristique    -->
     <section class="container mx-auto p-4">
       <div class="text-center pt-8 pb-8 space-y-2">
-        <h3 class="text-primary font-semibold text-sm">Caractéristique</h3>
-        <h1 class="text-black font-semibold text-2xl">
+        <h3 class="text-primary font-semibold text-sm md:text-base">Caractéristique</h3>
+        <h1 class="text-black font-semibold text-2xl md:text-3xl">
           Que contient notre quiz ?
         </h1>
       </div>
 
       <!-- Activities -->
-      <div class="space-y-6 pb-8">
+      <div class="space-y-6 pb-8 md:p-6">
         <div class="flex items-center gap-6">
           <img
             src="./assets/icons/activity.svg"
@@ -78,8 +78,8 @@
             class="p-5 bg-primary"
           />
           <div>
-            <h2 class="text-primary font-semibold text-base">+60K Questions</h2>
-            <p class="font-medium text-[10px]">
+            <h2 class="text-primary font-semibold text-base md:text-lg">+60K Questions</h2>
+            <p class="font-medium text-[10px] md:text-xs">
               Le lorem ipsum est, en imprimerie, une suite de mots sans
               signification utilisée à titre provisoire pour calibrer une mise
               en page,
@@ -170,7 +170,7 @@
     <!--    End Caractéristique    -->
 
     <!--    Start About    -->
-    <section class="bg-primary container mx-auto p-4 relative">
+    <section class="bg-primary p-4 relative md">
       <img
         src="./assets/images/Rectangle1.png"
         alt=""
@@ -192,22 +192,24 @@
         class="absolute right-5 top-4 rotate-90"
       />
 
-      <h1 class="text-center font-semibold text-lg text-textColor">
-        QCM KING C’est
-      </h1>
+      <div class="container mx-auto">
+        <h1 class="text-center font-semibold text-lg text-textColor">
+          QCM KING C’est
+        </h1>
 
-      <div class="flex items-center justify-evenly">
-        <div class="text-textColor flex flex-col items-center">
-          <h1 class="font-semibold text-xl">+ 47</h1>
-          <p class="font-medium">Quiz</p>
-        </div>
-        <div class="text-textColor flex flex-col items-center">
-          <h1 class="font-semibold text-xl">+ 16</h1>
-          <p class="font-medium">Modules</p>
-        </div>
-        <div class="text-textColor flex flex-col items-center">
-          <h1 class="font-semibold text-xl">+ 240</h1>
-          <p class="font-medium">Questions</p>
+        <div class="flex items-center justify-evenly">
+          <div class="text-textColor flex flex-col items-center">
+            <h1 class="font-semibold text-xl">+ 47</h1>
+            <p class="font-medium">Quiz</p>
+          </div>
+          <div class="text-textColor flex flex-col items-center">
+            <h1 class="font-semibold text-xl">+ 16</h1>
+            <p class="font-medium">Modules</p>
+          </div>
+          <div class="text-textColor flex flex-col items-center">
+            <h1 class="font-semibold text-xl">+ 240</h1>
+            <p class="font-medium">Questions</p>
+          </div>
         </div>
       </div>
     </section>
@@ -223,7 +225,7 @@
       </div>
 
       <!-- Card -->
-      <div class="flex flex-wrap items-center space-y-10">
+      <div class="flex flex-wrap items-start gap-5 space-y-10 md:space-y-0">
         <div
           class="card w-[300px] relative rounded-md text-left mx-auto overflow-hidden"
         >
@@ -330,25 +332,27 @@
 
     <!--   Start Footer   -->
 
-    <footer class="bg-primary p-10 container mx-auto space-y-10">
+    <footer class="bg-primary p-10">
       <!-- Contact -->
-      <div class="contact space-y-5">
-        <h1 class="text-white font-semibold text-2xl">Contact</h1>
-        <div class="space-y-3">
-          <input
-            type="mail"
-            placeholder="Email"
-            class="p-2 border border-white outline-none bg-primary placeholder-white"
-          />
-          <input
-            type="text"
-            placeholder="Message"
-            class="p-2 border border-white outline-none bg-primary placeholder-white"
-          />
+      <div class="container mx-auto space-y-10">
+        <div class="contact space-y-5">
+          <h1 class="text-white font-semibold text-2xl">Contact</h1>
+          <div class="space-y-3">
+            <input
+              type="mail"
+              placeholder="Email"
+              class="p-2 border border-white outline-none bg-primary placeholder-white"
+            />
+            <input
+              type="text"
+              placeholder="Message"
+              class="p-2 border border-white outline-none bg-primary placeholder-white"
+            />
+          </div>
+          <button class="px-6 py-2 bg-white font-medium text-base">
+            Envoyer
+          </button>
         </div>
-        <button class="px-6 py-2 bg-white font-medium text-base">
-          Envoyer
-        </button>
       </div>
     </footer>
 
