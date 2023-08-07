@@ -7,7 +7,8 @@ module.exports = {
         textColor: "#fff",
         textSecondary: "#00CF84",
         descColor: "#727171",
-        bgButton: "#d9f8ed"
+        bgButton: "#d9f8ed",
+        bgContent: "#B4FFFC",
       },
     },
   },
