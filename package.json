@@ -1,5 +1,5 @@
 {
-  "name": "doctor quiz",
+  "name": "doctor-quiz",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,6 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
     "autoprefixer": "^10.2.4",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^3.1.4"

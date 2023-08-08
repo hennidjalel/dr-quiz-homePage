@@ -7,10 +7,16 @@
     <meta name="author" content="Daily Dev Tips" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <!--    Start Navbar    -->
-    <section class="bg-transparent fixed top-0 z-50 w-full hidden">
+    <section class="bg-transparent fixed top-0 z-50 w-full">
       <nav class="container mx-auto p-4 flex items-center justify-between lg">
         <a href="/">
           <img src="./assets/logo/logo.svg" alt="Doctor Quiz" />
@@ -21,6 +27,7 @@
           <a href="#" class="p-2">Caractéristique </a>
           <a href="#" class="p-2">Fonctionnalités </a>
           <a href="#" class="p-2">Tarif</a>
+          <!-- <button>Conection</button> -->
         </div>
 
         <!-- start Hamburger Menu -->
@@ -44,22 +51,32 @@
 
     <!--    Start Header    -->
     <section class="header">
-      <div class="pt-14 pb-10 lg:pt-0">
+      <!-- desktop version  -->
+      <div class="hidden lg:block lg:pb-10 lg:pt-0">
         <div
-          class="text-center space-y-14 p-4 lg:flex lg:gap-0 lg:p-0 lg:space-y-0 lg:text-left bg-bgContent" 
+          class="lg:flex lg:gap-0 lg:p-0 lg:space-y-0 lg:text-left bg-bgContent"
         >
-          <img
-            src="./assets/images/imgHeader.png"
-            alt=""
-            class="mx-auto lg:order-2 bg-primary lg:rounded-xl lg:border-l-1  h-auto lg:pt-16 lg:pb-16 w-full lg:aspect-[4/3] xl:max-w-[500px]"
-          />
-
+          <!-- start image content -->
           <div
-            class="space-y-10 lg:order-1  lg:w-full lg:max-h-full lg:space-y-0 h-full  lg:flex lg:flex-col"
+            class="mx-auto container lg:order-2 bg-primary lg:rounded-xl lg:border-l-1 h-auto lg:pt-20 lg:pb-16 w-full lg:aspect-[4/3] xl:max-w-[500px]"
+          >
+            <img
+              src="./assets/images/imgHeader.png"
+              alt=""
+              class="mx-auto flex items-center justify-center h-full"
+            />
+          </div>
+          <!-- end image content -->
+
+          <!-- start header content -->
+          <div
+            class="lg:order-1 lg:w-full lg:max-h-full lg:space-y-0 h-full lg:flex lg:flex-col"
           >
             <!-- div 1 -->
-            <div class="bg-primary lg:pt-16 lg:rounded-xl lg:border-r-2 p-6 border-bgContent container mx-auto">
-              <div class="space-y-4 lg:text-left ">
+            <div
+              class="bg-primary lg:pt-24 lg:rounded-xl lg:border-r-2 p-6 border-bgContent container mx-auto"
+            >
+              <div class="space-y-4 lg:text-left lg:mb-8">
                 <h1
                   class="text-textColor text-3xl font-bold mx-auto max-w-xs md:max-w-md md:text-4xl lg:mx-0"
                 >
@@ -84,11 +101,15 @@
             <!-- div 2 -->
 
             <div class="hidden lg:flex">
-              <div class="lg:mx-h-full lg:w-1/3 text-textColor lg:p-4 bg-primary lg:rounded-xl lg:border-r-2 lg:border-t-2 border-bgContent">
-                <h3 class="">Quiz 2023</h3>
+              <div
+                class="lg:mx-h-full lg:w-1/3 text-textColor lg:p-4 bg-primary lg:rounded-xl lg:border-r-2 lg:border-t-2 border-bgContent lg:flex items-center justify-center"
+              >
+                <h3 class="rotate-90 flex items-center gap-3">Quiz 2023</h3>
               </div>
 
-              <div class="contact  space-y-5 p-4 border-bgContent border-r-2 border-t-2 rounded-xl bg-primary">
+              <div
+                class="contact space-y-5 p-4 border-bgContent border-r-2 border-t-2 rounded-xl bg-primary"
+              >
                 <h1 class="text-white font-semibold text-2xl">Contact</h1>
                 <div class="space-y-3">
                   <input
@@ -108,6 +129,40 @@
               </div>
             </div>
           </div>
+          <!-- end header content -->
+        </div>
+      </div>
+
+      <!-- mobile version  -->
+      <div class="bg-primary pt-20 pb-10 container mx-auto lg:hidden">
+        <div>
+          <img
+            src="./assets/images/imgHeader.png"
+            alt=""
+            class="mx-auto flex items-center justify-center h-full"
+          />
+        </div>
+        <div class="text-center">
+          <div class="p-6 space-y-4">
+            <h1
+              class="text-textColor text-3xl font-bold mx-auto max-w-xs md:max-w-md md:text-4xl"
+            >
+              Ton premier pas vers la réussite en sciences médicales.
+            </h1>
+            <p
+              class="text-textColor text-sm font-normal max-w-sm mx-auto md:text-base"
+            >
+              Rejoins plus de 50K étudiants en médecine, pharmacie et médecine
+              dentaire qui utilisent Siamois QCM pour préparer leurs examens et
+              concours du résidana
+            </p>
+          </div>
+
+          <button
+            class="bg-white px-14 py-4 text-lg font-medium lg:inline-block lg:float-left"
+          >
+            Choisir le programme
+          </button>
         </div>
       </div>
     </section>
@@ -125,103 +180,129 @@
       </div>
 
       <!-- Activities -->
-      <div class="space-y-6 pb-8 md:p-6">
-        <div class="flex items-center gap-6">
+      <div
+        class="space-y-6 pb-8 md:p-6 lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:gap-6 lg:space-y-0 text-justify 2xl:pl-20 2xl:pr-20"
+      >
+        <div class="flex items-center justify-center gap-6 xl:w-full">
           <img
             src="./assets/icons/activity.svg"
             alt=""
-            class="p-5 bg-primary"
+            class="p-5 bg-primary lg:h-full"
           />
-          <div>
-            <h2 class="text-primary font-semibold text-base md:text-lg">
+          <div class="2xl:space-y-5">
+            <h2
+              class="text-primary font-semibold text-base md:text-lg lg:text-xl 2xl:text-2xl"
+            >
               +60K Questions
             </h2>
-            <p class="font-medium text-[10px] md:text-xs">
+            <p
+              class="font-medium text-[10px] md:text-xs lg:text-sm lg:leading-tight xl:max-w-[400px]"
+            >
               Le lorem ipsum est, en imprimerie, une suite de mots sans
               signification utilisée à titre provisoire pour calibrer une mise
               en page,
             </p>
           </div>
         </div>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center justify-center gap-6 xl:w-full">
           <img
             src="./assets/icons/activity.svg"
             alt=""
-            class="p-5 bg-primary"
+            class="p-5 bg-primary lg:h-full"
           />
-          <div>
-            <h2 class="text-primary font-semibold text-base md:text-lg">
+          <div class="2xl:space-y-5">
+            <h2
+              class="text-primary font-semibold text-base md:text-lg lg:text-xl 2xl:text-2xl"
+            >
               Filtres puissants
             </h2>
-            <p class="font-medium text-[10px] md:text-xs">
+            <p
+              class="font-medium text-[10px] md:text-xs lg:text-sm lg:leading-tight xl:max-w-[400px]"
+            >
               Le lorem ipsum est, en imprimerie, une suite de mots sans
               signification utilisée à titre provisoire pour calibrer une mise
               en page,
             </p>
           </div>
         </div>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center justify-center gap-6 lg:row-start-2 xl:w-full">
           <img
             src="./assets/icons/activity.svg"
             alt=""
-            class="p-5 bg-primary"
+            class="p-5 bg-primary lg:h-full"
           />
-          <div>
-            <h2 class="text-primary font-semibold text-base md:text-lg">
+          <div class="2xl:space-y-5">
+            <h2
+              class="text-primary font-semibold text-base md:text-lg lg:text-xl 2xl:text-2xl"
+            >
               +Playlists
             </h2>
-            <p class="font-medium text-[10px] md:text-xs">
+            <p
+              class="font-medium text-[10px] md:text-xs lg:text-sm lg:leading-tight xl:max-w-[400px]"
+            >
               Le lorem ipsum est, en imprimerie, une suite de mots sans
               signification utilisée à titre provisoire pour calibrer une mise
               en page,
             </p>
           </div>
         </div>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center justify-center gap-6 lg:row-start-2 xl:w-full">
           <img
             src="./assets/icons/activity.svg"
             alt=""
-            class="p-5 bg-primary"
+            class="p-5 bg-primary lg:h-full"
           />
-          <div>
-            <h2 class="text-primary font-semibold text-base md:text-lg">
+          <div class="2xl:space-y-5">
+            <h2
+              class="text-primary font-semibold text-base md:text-lg lg:text-xl 2xl:text-2xl"
+            >
               +60K Questions
             </h2>
-            <p class="font-medium text-[10px] md:text-xs">
+            <p
+              class="font-medium text-[10px] md:text-xs lg:text-sm lg:leading-tight xl:max-w-[400px]"
+            >
               Le lorem ipsum est, en imprimerie, une suite de mots sans
               signification utilisée à titre provisoire pour calibrer une mise
               en page,
             </p>
           </div>
         </div>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center justify-center gap-6 lg:row-start-3 xl:w-full">
           <img
             src="./assets/icons/activity.svg"
             alt=""
-            class="p-5 bg-primary"
+            class="p-5 bg-primary lg:h-full"
           />
-          <div>
-            <h2 class="text-primary font-semibold text-base md:text-lg">
+          <div class="2xl:space-y-5">
+            <h2
+              class="text-primary font-semibold text-base md:text-lg lg:text-xl 2xl:text-2xl"
+            >
               Filtres puissants
             </h2>
-            <p class="font-medium text-[10px] md:text-xs">
+            <p
+              class="font-medium text-[10px] md:text-xs lg:text-sm lg:leading-tight xl:max-w-[400px]"
+            >
               Le lorem ipsum est, en imprimerie, une suite de mots sans
               signification utilisée à titre provisoire pour calibrer une mise
               en page,
             </p>
           </div>
         </div>
-        <div class="flex items-center gap-6">
+        <div class="flex items-center justify-center gap-6 lg:row-start-3 xl:w-full">
           <img
             src="./assets/icons/activity.svg"
             alt=""
-            class="p-5 bg-primary"
+            class="p-5 bg-primary lg:h-full"
           />
-          <div>
-            <h2 class="text-primary font-semibold text-base md:text-lg">
+          <div class="2xl:space-y-5">
+            <h2
+              class="text-primary font-semibold text-base md:text-lg lg:text-xl 2xl:text-2xl"
+            >
               +Playlists
             </h2>
-            <p class="font-medium text-[10px] md:text-xs">
+            <p
+              class="font-medium text-[10px] md:text-xs lg:text-sm lg:leading-tight xl:max-w-[400px]"
+            >
               Le lorem ipsum est, en imprimerie, une suite de mots sans
               signification utilisée à titre provisoire pour calibrer une mise
               en page,
@@ -233,45 +314,47 @@
     <!--    End Caractéristique    -->
 
     <!--    Start About    -->
-    <section class="bg-primary p-4 relative md">
+    <section class="bg-primary p-4 relative overflow-hidden lg:h-[250px]">
       <img
         src="./assets/images/Rectangle1.png"
         alt=""
-        class="absolute left-0 top-[30%]"
+        class="absolute left-0 top-[30%] lg:h-[35px] lg:-left-4"
       />
       <img
         src="./assets/images/Rectangle2.png"
         alt=""
-        class="absolute left-0 top-[55%]"
+        class="absolute -left-1 top-[55%] lg:h-[35px] lg:-left-4"
       />
       <img
         src="./assets/images/Rectangle1.png"
         alt=""
-        class="absolute right-0 top-2 rotate-90"
+        class="absolute right-0 top-0 rotate-90 lg:h-[40px]"
       />
       <img
         src="./assets/images/Rectangle2.png"
         alt=""
-        class="absolute right-5 top-4 rotate-90"
+        class="absolute right-5 top-2 rotate-90 lg:h-[40px] lg:right-8"
       />
 
-      <div class="container mx-auto">
-        <h1 class="text-center font-semibold text-textColor text-lg md:text-xl">
+      <div class="container mx-auto lg:h-full lg:flex lg:flex-col lg:justify-evenly  lg:items-center">
+        <h1
+          class="text-center font-semibold text-textColor text-lg md:text-xl lg:text-3xl"
+        >
           QCM KING C’est
         </h1>
 
-        <div class="flex items-center justify-evenly pt-4">
+        <div class="flex items-center justify-evenly pt-4 lg:gap-20">
           <div class="text-textColor flex flex-col items-center">
-            <h1 class="font-semibold text-xl">+ 47</h1>
-            <p class="font-medium">Quiz</p>
+            <h1 class="font-semibold text-xl lg:text-3xl">+ 47</h1>
+            <p class="font-medium lg:text-xl">Quiz</p>
           </div>
           <div class="text-textColor flex flex-col items-center">
-            <h1 class="font-semibold text-xl">+ 16</h1>
-            <p class="font-medium">Modules</p>
+            <h1 class="font-semibold text-xl lg:text-3xl">+ 16</h1>
+            <p class="font-medium lg:text-xl">Modules</p>
           </div>
           <div class="text-textColor flex flex-col items-center">
-            <h1 class="font-semibold text-xl">+ 240</h1>
-            <p class="font-medium">Questions</p>
+            <h1 class="font-semibold text-xl lg:text-3xl">+ 240</h1>
+            <p class="font-medium lg:text-xl">Questions</p>
           </div>
         </div>
       </div>
@@ -290,13 +373,13 @@
       </div>
 
       <!-- Card -->
-      <div class="flex flex-wrap items-start gap-5 space-y-10 md:space-y-0">
+      <div class="w-full flex flex-wrap items-center justify-center  space-y-10 md:space-y-0 ">
         <div
-          class="card w-[300px] relative rounded-md text-left mx-auto overflow-hidden"
+          class="card w-[300px] relative rounded-md text-left mx-auto overflow-hidden xl:w-[350px] xl:h-[400px] 2xl:w-[400px]"
         >
           <img
             src="./assets/images/cardImg.png"
-            class="h-[150px] w-full object-cover"
+            class="h-[150px] w-full object-cover xl:h-[200px]"
           />
 
           <div class="card-content p-4 space-y-3">
@@ -313,11 +396,11 @@
         </div>
 
         <div
-          class="card w-[300px] relative rounded-md text-left mx-auto overflow-hidden"
+          class="card w-[300px] relative rounded-md text-left mx-auto overflow-hidden xl:w-[350px] xl:h-[400px]  2xl:w-[400px]"
         >
           <img
             src="./assets/images/cardImg.png"
-            class="h-[150px] w-full object-cover"
+            class="h-[150px] w-full object-cover xl:h-[200px]"
           />
 
           <div class="card-content p-4 space-y-3">
@@ -334,11 +417,11 @@
         </div>
 
         <div
-          class="card w-[300px] relative rounded-md text-left mx-auto overflow-hidden"
+          class="card w-[300px] relative rounded-md text-left mx-auto overflow-hidden xl:w-[350px] xl:h-[400px] 2xl:w-[400px]"
         >
           <img
             src="./assets/images/cardImg.png"
-            class="h-[150px] w-full object-cover"
+            class="h-[150px] w-full object-cover xl:h-[200px]"
           />
 
           <div class="card-content p-4 space-y-3">
@@ -355,7 +438,9 @@
         </div>
       </div>
 
-      <a href="#" class="text-primary font-medium text-base inline-block"
+      <a
+        href="#"
+        class="text-primary font-medium text-base inline-block lg:hidden"
         >Plus</a
       >
     </section>
@@ -401,7 +486,7 @@
 
     <footer class="bg-primary p-10">
       <!-- Contact -->
-      <div class="container mx-auto space-y-10">
+      <div class="container mx-auto space-y-10 lg:hidden">
         <div class="contact space-y-5">
           <h1 class="text-white font-semibold text-2xl">Contact</h1>
           <div class="space-y-3">
@@ -421,6 +506,10 @@
           </button>
         </div>
       </div>
+
+      <!-- start footer Content -->
+      
+      <!-- end footer Content -->
     </footer>
 
     <!--   End Footer   -->
